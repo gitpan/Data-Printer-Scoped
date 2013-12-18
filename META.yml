@@ -16,6 +16,8 @@ meta-spec:
 name: Data-Printer-Scoped
 requires:
   Class::Method::Modifiers: 0
+  Data::Printer: 0
+  Sub::Exporter::Progressive: 0
 resources:
   repository: git://github.com/mattp-/Data-Printer-Scoped.git
-version: 0.001000
+version: 0.001001

@@ -28,7 +28,9 @@
       },
       "runtime" : {
          "requires" : {
-            "Class::Method::Modifiers" : "0"
+            "Class::Method::Modifiers" : "0",
+            "Data::Printer" : "0",
+            "Sub::Exporter::Progressive" : "0"
          }
       },
       "test" : {
@@ -46,6 +48,6 @@
          "web" : "https://github.com/mattp-/Data-Printer-Scoped"
       }
    },
-   "version" : "0.001000"
+   "version" : "0.001001"
 }
 

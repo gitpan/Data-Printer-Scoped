@@ -1,6 +1,6 @@
 package Data::Printer::Scoped;
 {
-  $Data::Printer::Scoped::VERSION = '0.001000';
+  $Data::Printer::Scoped::VERSION = '0.001001';
 }
 # ABSTRACT:  silence Data::Printer except in a controlled scope
 
@@ -48,7 +48,7 @@ Data::Printer::Scoped - silence Data::Printer except in a controlled scope
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

@@ -20,13 +20,15 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Data::Printer::Scoped",
   "PREREQ_PM" => {
-    "Class::Method::Modifiers" => 0
+    "Class::Method::Modifiers" => 0,
+    "Data::Printer" => 0,
+    "Sub::Exporter::Progressive" => 0
   },
   "TEST_REQUIRES" => {
     "File::HomeDir::Test" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.001000",
+  "VERSION" => "0.001001",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -35,7 +37,9 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Class::Method::Modifiers" => 0,
+  "Data::Printer" => 0,
   "File::HomeDir::Test" => 0,
+  "Sub::Exporter::Progressive" => 0,
   "Test::More" => 0
 );
 
