@@ -31,7 +31,7 @@
             "Class::Method::Modifiers" : "0",
             "Context::Preserve" : "0",
             "Data::Printer" : "0",
-            "import::into" : "0"
+            "Import::Into" : "0"
          }
       },
       "test" : {
@@ -49,6 +49,6 @@
          "web" : "https://github.com/mattp-/Data-Printer-Scoped"
       }
    },
-   "version" : "0.001002"
+   "version" : "0.001003"
 }
 

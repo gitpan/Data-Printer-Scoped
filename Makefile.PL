@@ -24,13 +24,13 @@ my %WriteMakefileArgs = (
     "Class::Method::Modifiers" => 0,
     "Context::Preserve" => 0,
     "Data::Printer" => 0,
-    "import::into" => 0
+    "Import::Into" => 0
   },
   "TEST_REQUIRES" => {
     "File::HomeDir::Test" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.001002",
+  "VERSION" => "0.001003",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -42,8 +42,8 @@ my %FallbackPrereqs = (
   "Context::Preserve" => 0,
   "Data::Printer" => 0,
   "File::HomeDir::Test" => 0,
-  "Test::More" => 0,
-  "import::into" => 0
+  "Import::Into" => 0,
+  "Test::More" => 0
 );
 
 

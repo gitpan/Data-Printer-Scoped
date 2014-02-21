@@ -3,7 +3,7 @@ NAME
     scope
 
 VERSION
-    version 0.001002
+    version 0.001003
 
 SYNOPSIS
     Sometimes you want to stick a dumper statement on a very hot codepath,
