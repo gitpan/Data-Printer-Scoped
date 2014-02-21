@@ -21,4 +21,4 @@ requires:
   Import::Into: 0
 resources:
   repository: git://github.com/mattp-/Data-Printer-Scoped.git
-version: 0.001003
+version: 0.001004

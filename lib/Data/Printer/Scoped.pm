@@ -1,6 +1,6 @@
 package Data::Printer::Scoped;
 # ABSTRACT:  silence Data::Printer except in a controlled scope
-$Data::Printer::Scoped::VERSION = '0.001003';
+$Data::Printer::Scoped::VERSION = '0.001004';
 use strict;
 use warnings;
 
@@ -13,7 +13,7 @@ use base qw(Exporter);
 
 our @EXPORT = qw(scope);
 
-our $enabled = 1;
+our $enabled = 0;
 
 install_modifier('Data::Printer', 'around', '_print_and_return', sub {
   my $orig = shift;
@@ -51,7 +51,7 @@ Data::Printer::Scoped - silence Data::Printer except in a controlled scope
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 

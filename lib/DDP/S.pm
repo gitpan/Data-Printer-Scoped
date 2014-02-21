@@ -1,5 +1,5 @@
 package DDP::S;
-$DDP::S::VERSION = '0.001003';
+$DDP::S::VERSION = '0.001004';
 use strict;
 use warnings;
 
@@ -24,7 +24,7 @@ DDP::S
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 AUTHOR
 
