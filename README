@@ -3,7 +3,7 @@ NAME
     scope
 
 VERSION
-    version 0.001001
+    version 0.001002
 
 SYNOPSIS
     Sometimes you want to stick a dumper statement on a very hot codepath,
@@ -33,7 +33,7 @@ AUTHOR
     Matthew Phillips <mattp@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Matthew Phillips
+    This software is copyright (c) 2014 by Matthew Phillips
     <mattp@cpan.org>.
 
     This is free software; you can redistribute it and/or modify it under

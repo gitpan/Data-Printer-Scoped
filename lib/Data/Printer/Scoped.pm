@@ -1,20 +1,19 @@
 package Data::Printer::Scoped;
-{
-  $Data::Printer::Scoped::VERSION = '0.001001';
-}
 # ABSTRACT:  silence Data::Printer except in a controlled scope
-
+$Data::Printer::Scoped::VERSION = '0.001002';
 use strict;
 use warnings;
 
 use Data::Printer ();
+use Import::Into;
+use Context::Preserve;
 use Class::Method::Modifiers qw(:all);
-use Sub::Exporter::Progressive -setup => {
-  exports => [qw(scope)],
-  groups => { default => [qw(scope)] },
-};
 
-our $enabled = 0;
+use base qw(Exporter);
+
+our @EXPORT = qw(scope);
+
+our $enabled = 1;
 
 install_modifier('Data::Printer', 'around', '_print_and_return', sub {
   my $orig = shift;
@@ -23,15 +22,19 @@ install_modifier('Data::Printer', 'around', '_print_and_return', sub {
   return $enabled ? $orig->(@_) : ();
 });
 
+sub import {
+  shift->export_to_level(1);
+  Data::Printer->import::into(1);
+}
+
 # we only blanket disable Data::Printer if a scope() call has been made.
 sub scope(&) {
   my ($code) = @_;
 
-  $enabled = 1;
-  my @ret = $code->();
   $enabled = 0;
 
-  return @ret;
+  return preserve_context { $enabled = 1; $code->() }
+             after => sub { $enabled = 0 };
 }
 
 1;
@@ -48,7 +51,7 @@ Data::Printer::Scoped - silence Data::Printer except in a controlled scope
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
@@ -86,7 +89,7 @@ Matthew Phillips <mattp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Matthew Phillips <mattp@cpan.org>.
+This software is copyright (c) 2014 by Matthew Phillips <mattp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
